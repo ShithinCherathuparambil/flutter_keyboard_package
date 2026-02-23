@@ -13,11 +13,11 @@ A highly customizable on-screen virtual keyboard package for Flutter. Build flex
 
 ## Screenshots
 <p align="center">
-  <img src="assets/screenshots/screenshot_1.png" width="30%" />
-  <img src="assets/screenshots/screenshot_2.png" width="30%" />
-  <img src="assets/screenshots/screenshot_3.png" width="30%" />
-  <img src="assets/screenshots/screenshot_4.png" width="30%" />
-  <img src="assets/screenshots/screenshot_5.png" width="30%" />
+  <img src="https://raw.githubusercontent.com/ShithinCherathuparambil/flutter_keyboard_package/main/assets/screenshots/screenshot_1.png" width="30%" />
+  <img src="https://raw.githubusercontent.com/ShithinCherathuparambil/flutter_keyboard_package/main/assets/screenshots/screenshot_2.png" width="30%" />
+  <img src="https://raw.githubusercontent.com/ShithinCherathuparambil/flutter_keyboard_package/main/assets/screenshots/screenshot_3.png" width="30%" />
+  <img src="https://raw.githubusercontent.com/ShithinCherathuparambil/flutter_keyboard_package/main/assets/screenshots/screenshot_4.png" width="30%" />
+  <img src="https://raw.githubusercontent.com/ShithinCherathuparambil/flutter_keyboard_package/main/assets/screenshots/screenshot_5.png" width="30%" />
 </p>
 
 ## Getting started
