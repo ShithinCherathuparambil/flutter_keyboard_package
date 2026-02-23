@@ -22,11 +22,11 @@ A highly customizable on-screen virtual keyboard package for Flutter. Build flex
 
 ## Getting started
 
-Add `flutter_keyboard` to your `pubspec.yaml`:
+Add `future_keyboard_kit` to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  flutter_keyboard: ^0.0.1
+  future_keyboard_kit: ^0.0.1
 ```
 
 ## Usage
@@ -34,7 +34,7 @@ dependencies:
 Simply drop a `FlutterKeyboard` into your widget tree, provide it with a layout and an optional `TextEditingController`. 
 
 ```dart
-import 'package:flutter_keyboard/flutter_keyboard.dart';
+import 'package:future_keyboard_kit/future_keyboard_kit.dart';
 // ...
 
 final TextEditingController _controller = TextEditingController();

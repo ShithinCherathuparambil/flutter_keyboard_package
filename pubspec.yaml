@@ -1,7 +1,8 @@
-name: flutter_keyboard
-description: "A new Flutter package project."
+name: future_keyboard_kit
+description: "A highly customizable Flutter virtual keyboard package with rich layouts and interactive themes."
 version: 0.0.1
-homepage:
+homepage: https://github.com/ShithinCherathuparambil/flutter_keyboard_package
+repository: https://github.com/ShithinCherathuparambil/flutter_keyboard_package
 
 environment:
   sdk: ^3.10.8

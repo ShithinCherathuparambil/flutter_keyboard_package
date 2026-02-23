@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_keyboard/flutter_keyboard.dart';
+import 'package:future_keyboard_kit/future_keyboard_kit.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
