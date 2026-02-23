@@ -26,10 +26,61 @@ Add `future_keyboard_kit` to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  future_keyboard_kit: ^0.0.1
+  future_keyboard_kit: ^0.0.2
 ```
 
-## Usage
+## TextField Setup (Required)
+
+Use a `TextEditingController` and make your `TextField` read-only so the system keyboard does not appear.
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:future_keyboard_kit/future_keyboard_kit.dart';
+
+class KeyboardInputPage extends StatefulWidget {
+  const KeyboardInputPage({super.key});
+
+  @override
+  State<KeyboardInputPage> createState() => _KeyboardInputPageState();
+}
+
+class _KeyboardInputPageState extends State<KeyboardInputPage> {
+  final TextEditingController _controller = TextEditingController();
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        TextField(
+          controller: _controller,
+          readOnly: true,
+          showCursor: true,
+          decoration: const InputDecoration(
+            border: OutlineInputBorder(),
+            hintText: 'Type using custom keyboard',
+          ),
+        ),
+        const SizedBox(height: 12),
+        FlutterKeyboard(
+          controller: _controller,
+          layout: VirtualKeyboardLayout.alphanumeric(),
+          specialCharactersLayout: VirtualKeyboardLayout.specialCharacters(),
+          specialCharactersSecondaryLayout:
+              VirtualKeyboardLayout.specialCharactersSecondary(),
+        ),
+      ],
+    );
+  }
+}
+```
+
+## Basic Usage
 
 Simply drop a `FlutterKeyboard` into your widget tree, provide it with a layout and an optional `TextEditingController`. 
 
@@ -55,6 +106,28 @@ FlutterKeyboard(
     }
   },
 );
+```
+
+## Configure Text Behavior
+
+Use these options to control editing behavior:
+
+- `maxLength`: limit input size
+- `allowMultipleDecimals`: prevent multiple decimal points
+- `insertNewLineOnEnter`: disable newline on enter and treat enter as submit
+- `onTextChanged`: listen to every text update
+- `onSubmitted`: listen when enter is tapped
+
+```dart
+FlutterKeyboard(
+  controller: _controller,
+  layout: VirtualKeyboardLayout.numericDecimal(),
+  maxLength: 8,
+  allowMultipleDecimals: false,
+  insertNewLineOnEnter: false,
+  onTextChanged: (value) => debugPrint('Changed: $value'),
+  onSubmitted: (value) => debugPrint('Submitted: $value'),
+)
 ```
 
 For advanced usage including fully custom layouts, run the `example` application included in the repository.

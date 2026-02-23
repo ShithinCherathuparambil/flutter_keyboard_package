@@ -1,3 +1,8 @@
+## 0.0.2
+
+* Improved README with complete setup instructions for integrating `TextField` with the keyboard.
+* Added explicit configuration guidance for `readOnly` text fields and input behavior options.
+
 ## 0.0.1
 
 * Initial stable release of `future_keyboard_kit`.
